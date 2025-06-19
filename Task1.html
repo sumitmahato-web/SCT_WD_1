@@ -1,171 +1,384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <title>Stopwatch App</title>
-  <style>
-/* General Styles */
-body {
- .time-box {
-  background: #2a2a2a;
-  padding: 1rem 0.05rem;
-  border-radius: 10px;
-  border: 2px solid #444;
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
-}
-  background: #121212;
-  color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
-/* Stopwatch Container */
-.stopwatch {
-  background: #1f1f1f;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  width: 300px;
-}
-
-/* Time Display */
-#time {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-/* Buttons Container */
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 1rem;
-}
-
-/* Button Base Style */
-.buttons button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-/* Button Colors */
-.start { background: #4caf50; color: white; }
-.pause { background: #ff9800; color: white; }
-.reset { background: #f44336; color: white; }
-.lap   { background: #2196f3; color: white; }
-
-/* Hover Effects */
-.buttons button:hover {
-  opacity: 0.9;
-}
-
-/* Lap List Styles */
-.laps {
-  max-height: 150px;
-  overflow-y: auto;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-/* Lap List Items */
-.laps li {
-  list-style: none;
-  background: #2c2c2c;
-  padding: 0.5rem 1rem;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  font-size: 0.95rem;
-}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
 </head>
+
 <body>
+  <!DOCTYPE html>
+<html>
 
-  <div class="stopwatch">
-    <div class="time-box">
-  <div id="time">00:00:00:000</div>
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
 
-    <div class="buttons">
-      <button class="start" onclick="start()">Start</button>
-      <button class="pause" onclick="pause()">Pause</button>
-      <button class="reset" onclick="reset()">Reset</button>
-      <button class="lap" onclick="lap()">Lap</button>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VF CITY - Fashion Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f2f2f2, #e6f7ff);
+      color: #333;
+    }
+
+    #container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 60px;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    #container {
+  transition: background-color 0.3s ease;
+}
+    #container1{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      font-size: 16px;
+    }
+
+    nav div {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    nav div:hover {
+      color: #00bcd4;
+      transform: scale(1.05);
+    }
+
+    main {
+      padding-top: 80px;
+      padding: 40px 60px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      background-color: white;
+    }
+
+    .promo-images img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .promo-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .promo-text h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .highlight {
+      font-size: 60px;
+      font-weight: 700;
+      background: linear-gradient(120deg, #ff416c, #ff4b2b, #00bcd4);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: -10px;
+    }
+
+    .offer {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .offer-text {
+      font-size: 18px;
+      padding: 10px 15px;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+
+    .offer-online {
+      background-color: #111;
+      color: white;
+    }
+
+    .offer-discount {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .highlight {
+        font-size: 40px;
+      }
+
+      .promo-text h2 {
+        font-size: 18px;
+      }
+
+      .offer-text {
+        font-size: 16px;
+      }
+
+      
+
+      nav {
+        gap: 15px;
+        font-size: 14px;
+      }
+
+      header {
+        padding: 0 20px;
+      }
+    }
+    .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 16px;
+    }
+
+.action-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-item:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .header-actions {
+    gap: 15px;
+    font-size: 14px;
+  }
+}
+footer {
+  width: 100%;
+  background-color: #000; /* Black background */
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 16px;
+}
+
+footer div {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer div:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+  }
+}
+.image-with-button {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-with-button img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.shop-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #CB07A4C9; /* Match tones in the image */
+  color: white;
+  padding: 12px 24px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.shop-btn:hover {
+  background-color: #D708F0F0;
+}
+.image-with-button {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-with-button img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.shop-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:purple#EE05FFF0; /* You can adjust this color based on the gown image */
+  color: white;
+  padding: 12px 24px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.shop-btn:hover {
+  background-color:#A105FFD14a148c;
+}
+
+.see-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.see-more a {
+  font-size: 18px;
+  color: maroon#00000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.see-more a:hover {
+  color:ochere yellow#008CA77D;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="container">
+        <div class="brand">CJ FASHION</div>
+        <div id="container1">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <div class="action-item"><i class="fas fa-search"></i></div>
+            <div class="action-item"><i class="fas fa-heart"></i></div>
+            <div class="action-item"><i class="fas fa-shopping-cart"></i></div>
+        </div>
     </div>
 
-    <ul class="laps" id="laps"></ul>
-  </div>
+</header>
+  <main>
+    <div class="promo-images">
+      <img src="https://images.unsplash.com/photo-1612423284934-d77dcf0c2105?auto=format&fit=crop&w=500&q=80" alt="Fashion 1">
+    </div>
 
-  <script>
-    let startTime, elapsedTime = 0, timerInterval;
+    <section class="promo-text">
+      <h2>✦You wear it.You own it.<br>✦Fashion that fits your life✦ </h2>
+      <p style="margin-top: 10px; font-style: italic;">New Arrivals</p>
+      <div>
+        <div>
+  <div class="highlight">JUST FOR YOU</div>
+</div>
 
-    function timeToString(time) {
-      let diffInHrs = time / 3600000;
-      let hh = Math.floor(diffInHrs);
-
-      let diffInMin = (diffInHrs - hh) * 60;
-      let mm = Math.floor(diffInMin);
-
-      let diffInSec = (diffInMin - mm) * 60;
-      let ss = Math.floor(diffInSec);
-
-      let diffInMs = (diffInSec - ss) * 1000;
-      let ms = Math.floor(diffInMs);
-
-      return (
-        `${hh.toString().padStart(2, '0')}:` +
-        `${mm.toString().padStart(2, '0')}:` +
-        `${ss.toString().padStart(2, '0')}.` +
-        `${ms.toString().padStart(3, '0')}`
-      );
+      <div class="offer">
+        <div class="offer-text offer-online">For First Order</div>
+        <div class="offer-text offer-discount">30% OFF</div>
+      </div>
+    </section>
+<div class="promo-images image-with-button">
+  <img src="https://thelibas.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-06-at-2.27.54-PM.jpeg" alt="Just for You Image" />
+  <a href="#" class="shop-btn">Shop Now</a>
+</div>
+    <div class="promo-images image-with-button">
+  <img src="https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/9s145MyZrWdIAwpU0JYS/product-images/printed_purple_silk_gown_for_girls_17381351282120_as3219003.jpg" alt="Fashion 2">
+  <a href="#" class="shop-btn">Shop Now</a>
+</div>
+<div class="see-more">
+  <a href="#">See More</a>
+</div>
+  </main>
+<script>
+  const nav = document.getElementById("container");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      nav.style.backgroundColor = "#333"; // Darker when scrolling
+    } else {
+      nav.style.backgroundColor = "#111"; // Original color
     }
-
-    function print(txt) {
-      document.getElementById("time").innerHTML = txt;
-    }
-
-    function start() {
-      startTime = Date.now() - elapsedTime;
-      timerInterval = setInterval(function printTime() {
-        elapsedTime = Date.now() - startTime;
-        print(timeToString(elapsedTime));
-      }, 10);
-    }
-
-    function pause() {
-      clearInterval(timerInterval);
-    }
-
-    function reset() {
-      clearInterval(timerInterval);
-      print("00:00:00.000");
-      elapsedTime = 0;
-      document.getElementById("laps").innerHTML = "";
-    }
-
-    function lap() {
-      const lapTime = timeToString(elapsedTime);
-      const lapList = document.getElementById("laps");
-      const li = document.createElement("li");
-      li.textContent = lapTime;
-      lapList.appendChild(li);
-    }
-  </script>
-
+  });
+</script>
+  <footer>
+  <div>Home</div>
+  <div>About</div>
+  <div>Services</div>
+  <div>Contact</div>
+</footer>
 </body>
+
+</html>
+  
+</body>
+
+</html>
+</body>
+
 </html>
